@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "Berlin Sans FB Demi";
+  src: url("../web-fonts/BerlinSansFBDemi-Bold.woff2") format("woff2"), url("../web-fonts/BerlinSansFBDemi-Bold.woff") format("woff");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../web-fonts/Poppins-Regular.woff2") format("woff2"), url("../web-fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("../web-fonts/Barlow-SemiBold.woff2") format("woff2"), url("../web-fonts/Barlow-SemiBold.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("../web-fonts/Barlow-Medium.woff2") format("woff2"), url("../web-fonts/Barlow-Medium.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("../web-fonts/Barlow-Bold.woff2") format("woff2"), url("../web-fonts/Barlow-Bold.woff") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("../web-fonts/Barlow-ExtraBold.woff2") format("woff2"), url("../web-fonts/Barlow-ExtraBold.woff") format("woff");
+  font-weight: 800;
+}
+body {
+  font-family: "Barlow";
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  h3 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.box_design {
+  margin-top: 300px;
+}
+.box_design .box_row {
+  row-gap: 25px;
+}
+@media screen and (max-width: 1199px) {
+  .box_design .box_row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+}
+.box_design .card_col {
+  width: 380px;
+}
+@media screen and (min-width: 1400px) {
+  .box_design .card_col {
+    width: 400px;
+  }
+}
+.box_design .card_holder {
+  border-radius: 70px 70px 0px 0px;
+  text-align: center;
+  border: 1px solid #dfe0e4;
+  overflow: hidden;
+  padding: 30px 0px 0px;
+  position: relative;
+}
+.box_design .card_holder::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 80px;
+  top: -15px;
+  left: 0;
+  background-color: #ebf2fc;
+  border-radius: 50%;
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  .box_design .card_holder::after {
+    height: 85px;
+  }
+}
+@media screen and (min-width: 768p) {
+  .box_design .card_holder {
+    padding: 55px 0px 0px;
+  }
+}
+.box_design .icon_box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #3f73fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  z-index: 1;
+}
+@media screen and (min-width: 576px) {
+  .box_design .icon_box {
+    width: 80px;
+    height: 80px;
+  }
+}
+.box_design .icon_box i {
+  color: #fff;
+  font-size: 25px;
+}
+@media screen and (min-width: 576px) {
+  .box_design .icon_box i {
+    font-size: 30px;
+  }
+}
+.box_design .content {
+  padding: 15px 0px 10px;
+}
+@media screen and (min-width: 576px) {
+  .box_design .content {
+    padding: 30px 30px 30px;
+  }
+}
+.box_design .provide_list {
+  margin-top: 10px;
+}
+.box_design .text p {
+  line-height: 1.9;
+}
+.box_design p {
+  color: #636363;
+  margin-bottom: 6px;
+}
+.box_design li {
+  list-style: none;
+  color: #636363;
+}
+.box_design li a {
+  color: inherit;
+  text-decoration: none;
+}
+.box_design li i {
+  color: #000;
+  margin-right: 5px;
+}
+.box_design .content_number {
+  border-top: 1px solid #dfe0e4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 70px 70px 0px 0px;
+  border-radius: unset;
+  padding: 15px;
+}
+@media screen and (min-width: 768px) {
+  .box_design .content_number {
+    padding: 15px;
+  }
+}
+.box_design .link a {
+  text-decoration: none;
+}
+.box_design .link i {
+  margin-left: 5px;
+  font-size: 14px;
+}/*# sourceMappingURL=style.css.map */

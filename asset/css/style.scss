@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Berlin Sans FB Demi';
+    src: url('../web-fonts/BerlinSansFBDemi-Bold.woff2') format('woff2'),
+        url('../web-fonts/BerlinSansFBDemi-Bold.woff') format('woff');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('../web-fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../web-fonts/Poppins-Regular.woff') format('woff');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Barlow';
+    src: url('../web-fonts/Barlow-SemiBold.woff2') format('woff2'),
+        url('../web-fonts/Barlow-SemiBold.woff') format('woff');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Barlow';
+    src: url('../web-fonts/Barlow-Medium.woff2') format('woff2'),
+        url('../web-fonts/Barlow-Medium.woff') format('woff');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Barlow';
+    src: url('../web-fonts/Barlow-Bold.woff2') format('woff2'),
+        url('../web-fonts/Barlow-Bold.woff') format('woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('../web-fonts/Barlow-ExtraBold.woff2') format('woff2'),
+        url('../web-fonts/Barlow-ExtraBold.woff') format('woff');
+    font-weight: 800;
+}
+@mixin minwidth($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin maxwidth($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+body{
+    font-family: 'Barlow';
+}
+
+h3{
+    font-size: 16px;
+    font-weight: 700;
+    @include minwidth(768px){
+        font-size: 18px;
+    }
+    @include minwidth(1400px){
+        font-size: 22px;
+    }
+}
+.container{
+    @include minwidth(1400px){
+        max-width: 1200px;
+    }
+}
+
+.box_design{
+    margin-top: 300px;
+    .box_row{
+        row-gap: 25px;
+        @include maxwidth(1199px){
+            overflow-x: auto;
+            flex-wrap: nowrap;
+        }
+    }
+    .card_col{
+        width: 380px;
+        @include minwidth(1400px){
+            width: 400px;
+        }
+    }
+    .card_holder{
+        border-radius: 70px 70px 0px 0px;
+        text-align: center;
+        border: 1px solid #dfe0e4;
+        overflow: hidden;
+        padding: 30px 0px 0px;
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 80px;
+            top: -15px;
+            left: 0;
+            background-color: #ebf2fc;
+            border-radius: 50%;
+            z-index: -1;
+            @include minwidth(768px){
+                height: 85px;
+            }
+        }
+        @include minwidth(768p){
+            padding: 55px 0px 0px;
+        }
+    }
+    .icon_box{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #3f73fb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        z-index: 1;
+        @include minwidth(576px){
+            width: 80px;
+            height: 80px;
+        }
+        i{
+            color: #fff;
+            font-size: 25px;
+            @include minwidth(576px){
+                font-size: 30px;
+            }
+        }
+    }
+    .content{
+        padding: 15px 0px 10px;
+        @include minwidth(576px){
+            padding: 30px 30px 30px;
+        }
+    }
+    .provide_list{
+        margin-top: 10px;
+    }
+    .text{
+        p{
+            line-height: 1.9;
+        }
+    }
+    p{
+        color: #636363;
+        margin-bottom: 6px;
+    }
+    li{
+        list-style: none;
+        color: #636363;
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        i{
+            color: #000;
+            margin-right: 5px;
+        }
+    }
+    .content_number{
+        border-top: 1px solid #dfe0e4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;border-radius: 70px 70px 0px 0px;
+        border-radius: unset;
+        padding: 15px;
+        @include minwidth(768px){
+            padding: 15px;
+        }
+    }
+    .link{
+        a{
+            text-decoration: none;
+        }
+        i{
+            margin-left: 5px;
+            font-size: 14px;
+        }
+    }
+}
